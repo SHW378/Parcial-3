@@ -1,0 +1,52 @@
+/* Hace que el footer quede pegado abajo */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+}
+
+/* Navbar personalizada */
+.custom-navbar {
+    background-color: #5a5c75 !important;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.custom-navbar .navbar-brand {
+    color: #fff;
+    font-family: 'Segoe Script', cursive;
+    font-size: 1.1rem;
+}
+
+.custom-navbar .logo-text {
+    font-family: 'Segoe Script', cursive;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+}
+
+.custom-navbar .nav-link {
+    color: #fff !important;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 0.5rem;
+    letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link.active,
+.custom-navbar .nav-link:focus {
+    color: #ffc107 !important;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffc107 !important;
+}
