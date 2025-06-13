@@ -53,3 +53,13 @@ footer {
 .custom-navbar .nav-link:hover {
     color: #ffc107 !important;
 }
+
+.main-logo-container {
+    height: 60vh;
+}
+
+.main-logo {
+    width: 800px;
+    height: auto;
+    display: block;
+}
