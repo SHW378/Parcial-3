@@ -108,3 +108,8 @@ footer {
 .page-link {
     color: var(--bs-primary);
 }
+
+.main-content-max {
+    max-width: 1300px;
+    margin: 0 auto;
+}
