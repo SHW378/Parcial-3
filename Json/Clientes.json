@@ -1,0 +1,10 @@
+[
+    {
+        "nombre": "Juan",
+        "telefono": "1234567890",
+        "direccion": "Calle 1",
+        "apellido": "Pérez",
+        "correo": "juan@mail.com",
+        "historial": "Frecuente"
+    }
+]
