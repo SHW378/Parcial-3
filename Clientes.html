@@ -47,37 +47,24 @@
                                 <strong>Gestión de Clientes</strong>
                             </div>
                             <div class="card-body">
-                                <form id="clienteForm" onsubmit="addCliente(); return false;"
-                                    onreset="limpiarFormulario();">
+                                <form id="clienteForm" onsubmit="addCliente(); return false;" onreset="limpiarFormulario();">
                                     <div class="row">
                                         <div class="col-6">
-                                            <input type="text" class="form-control form-control-lg mb-2"
-                                                placeholder="Nombre(s)" id="nombre" required>
-                                            <input type="text" class="form-control form-control-lg mb-2"
-                                                placeholder="Telefono" id="telefono" required>
-                                            <input type="text" class="form-control form-control-lg mb-2"
-                                                placeholder="Direccion" id="direccion" required>
+                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Nombre(s)" id="nombre" required>
+                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Telefono" id="telefono" required>
+                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Direccion" id="direccion" required>
                                         </div>
                                         <div class="col-6">
-                                            <input type="text" class="form-control form-control-lg mb-2"
-                                                placeholder="Apellido(s)" id="apellido" required>
-                                            <input type="email" class="form-control form-control-lg mb-2"
-                                                placeholder="Correo electronico" id="correo" required>
-                                            <input type="text" class="form-control form-control-lg mb-2"
-                                                placeholder="Historial" id="historial">
+                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Apellido(s)" id="apellido" required>
+                                            <input type="email" class="form-control form-control-lg mb-2" placeholder="Correo electronico" id="correo" required>
+                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Historial" id="historial">
                                         </div>
                                     </div>
                                     <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
-                                        <button type="submit" class="btn btn-lg"
-                                            style="background:#00ff4c;color:#fff;">Registrar</button>
-                                        <button type="reset" class="btn btn-lg"
-                                            style="background:#e5d7d7;color:#23254a;">Limpiar</button>
-                                        <button type="button" class="btn btn-lg" id="btnActualizar"
-                                            style="background:#ffe600;color:#23254a;" onclick="updateCliente();"
-                                            disabled>Actualizar</button>
-                                        <button type="button" class="btn btn-lg" id="btnEliminar"
-                                            style="background:#ff0000;color:#fff;" onclick="deleteCliente();"
-                                            disabled>Eliminar</button>
+                                        <button type="submit" class="btn btn-lg" style="background:#00ff4c;color:#fff;">Registrar</button>
+                                        <button type="reset" class="btn btn-lg" style="background:#e5d7d7;color:#23254a;">Limpiar</button>
+                                        <button type="button" class="btn btn-lg" id="btnActualizar" style="background:#ffe600;color:#23254a;" disabled>Actualizar</button>
+                                        <button type="button" class="btn btn-lg" id="btnEliminar" style="background:#ff0000;color:#fff;" disabled>Eliminar</button>
                                     </div>
                                 </form>
                             </div>
