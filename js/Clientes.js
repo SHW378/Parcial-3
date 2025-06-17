@@ -12,12 +12,12 @@ function loadTabla() {
     clientes.forEach(function(cliente, idx) {
         let registro = `
             <tr onclick="selectClientes(${idx})">
-                <td>${cliente.nombre}</td>
-                <td>${cliente.apellido ? cliente.apellido : ""}</td>
-                <td>${cliente.telefono ? cliente.telefono : ""}</td>
-                <td>${cliente.correo ? cliente.correo : ""}</td>
-                <td>${cliente.direccion ? cliente.direccion : ""}</td>
-                <td>${cliente.historial ? cliente.historial : ""}</td>
+                <td>${cliente.nombre || ""}</td>
+                <td>${cliente.apellido || ""}</td>
+                <td>${cliente.telefono || ""}</td>
+                <td>${cliente.correo || ""}</td>
+                <td>${cliente.direccion || ""}</td>
+                <td>${cliente.historial || ""}</td>
             </tr>
         `;
         cuerpo += registro;
@@ -93,7 +93,7 @@ document.getElementById("clienteForm").onsubmit = function(e) {
 };
 document.getElementById("btnActualizar").onclick = updateCliente;
 document.getElementById("btnEliminar").onclick = deleteCliente;
-document.getElementById("clienteForm").onreset = limpiarFormulario;
+document.getElementById("clienteForm").onreset = limpiarFormulario();
 
 // Desactivar botones
 document.getElementById("btnActualizar").disabled = true;

@@ -12,10 +12,10 @@ function loadTabla() {
     categorias.forEach(function(categoria, idx) {
         let registro = `
             <tr onclick="selectCategorias(${idx})">
-                <td>${categoria.Nombre}</td>
-                <td>${categoria.Fecha ? categoria.Fecha : ""}</td>
-                <td>${categoria.Descripcion ? categoria.Descripcion : ""}</td>
-                <td>${categoria.Estado ? categoria.Estado : ""}</td>
+                <td>${categoria.Nombre || ""}</td>
+                <td>${categoria.Fecha || ""}</td>
+                <td>${categoria.Descripcion || ""}</td>
+                <td>${categoria.Estado || ""}</td>
             </tr>
         `;
         cuerpo += registro;
@@ -86,7 +86,7 @@ document.getElementById("categoriasForm").onsubmit = function(e) {
 };
 document.getElementById("btnActualizar").onclick = updateCategoria;
 document.getElementById("btnEliminar").onclick = deleteCategoria;
-document.getElementById("categoriasForm").onreset = limpiarFormulario;
+document.getElementById("categoriasForm").onreset = limpiarFormulario();
 
 // Desactivar botones
 document.getElementById("btnActualizar").disabled = true;

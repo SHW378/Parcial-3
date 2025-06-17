@@ -12,9 +12,9 @@ function loadTabla() {
     promociones.forEach(function(promocion, idx){
         let registro = `
             <tr onclick="selectPromociones(${idx})">
-                <td>${promocion.nombre}</td>
-                <td>${promocion.Descuento ? promocion.Descuento : ""}</td>
-                <td>${promocion.fechaActiva ? promocion.fechaActiva : ""}</td>
+                <td>${promocion.nombre || ""}</td>
+                <td>${promocion.Descuento || ""}</td>
+                <td>${promocion.fechaActiva || ""}</td>
             </tr>
         `;
         cuerpo += registro;
@@ -79,7 +79,7 @@ document.getElementById("promocionForm").onsubmit = function(e) {
 }
 document.getElementById("btnActualizar").onclick = updatePromocion;
 document.getElementById("btnEliminar").onclick = deletePromocion;
-document.getElementById("promocionForm").onreset = limpiarFormulario;
+document.getElementById("promocionForm").onreset = limpiarFormulario();
 
 // Desactivar botones
 document.getElementById("btnActualizar").disabled = true;
