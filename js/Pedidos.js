@@ -25,10 +25,10 @@ function loadTabla() {
 
 function addPedido() {
     let pedido = {};
-    pedido.nombre = document.getElementById("Nombre").value;
-    pedido.fecha = document.getElementById("Fecha").value;
-    pedido.cantidad = document.getElementById("Cantidad").value;
-    pedido.estado = document.getElementById("Estado").value;
+    pedido.Nombre = document.getElementById("Nombre").value;
+    pedido.Fecha = document.getElementById("Fecha").value;
+    pedido.Cantidad = document.getElementById("Cantidad").value;
+    pedido.Estado = document.getElementById("Estado").value;
     pedidos.push(pedido);
     loadTabla();
     limpiarFormulario();
@@ -82,11 +82,11 @@ function limpiarFormulario() {
 // Eventos para los botones
 document.getElementById("pedidosForm").onsubmit = function(e) {
     e.preventDefault();
-    addCliente();
+    addPedido();
 };
 document.getElementById("btnActualizar").onclick = updatePedido;
 document.getElementById("btnEliminar").onclick = deletePedido;
-document.getElementById("pedidosForm").onreset = limpiarFormulario;
+document.getElementById("pedidosForm").onreset = limpiarFormulario();
 
 // Desactivar botones
 document.getElementById("btnActualizar").disabled = true;
