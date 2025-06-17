@@ -13,8 +13,8 @@ function loadTabla() {
         let registro = `
             <tr onclick="selectPromociones(${idx})">
                 <td>${promocion.nombre}</td>
-                <td>${promocion.Descuento}</td>
-                <td>${promocion.fechaActiva}</td>
+                <td>${promocion.Descuento ? promocion.Descuento : ""}</td>
+                <td>${promocion.fechaActiva ? promocion.fechaActiva : ""}</td>
             </tr>
         `;
         cuerpo += registro;
