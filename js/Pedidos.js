@@ -12,10 +12,10 @@ function loadTabla() {
     pedidos.forEach(function(pedido, idx) {
         let registro = `
             <tr onclick="selectPedidos(${idx})">
-                <td>${pedido.Nombre}</td>
-                <td>${pedido.Cantidad ? pedido.Cantidad : ""}</td>
-                <td>${pedido.Fecha ? pedido.Fecha : ""}</td>
-                <td>${pedido.Estado ? pedido.Estado : ""}</td>
+                <td>${pedido.Nombre || ""}</td>
+                <td>${pedido.Cantidad || ""}</td>
+                <td>${pedido.Fecha || ""}</td>
+                <td>${pedido.Estado || ""}</td>
             </tr>
         `;
         cuerpo += registro;
@@ -26,8 +26,8 @@ function loadTabla() {
 function addPedido() {
     let pedido = {};
     pedido.Nombre = document.getElementById("Nombre").value;
-    pedido.Fecha = document.getElementById("Fecha").value;
     pedido.Cantidad = document.getElementById("Cantidad").value;
+    pedido.Fecha = document.getElementById("Fecha").value;
     pedido.Estado = document.getElementById("Estado").value;
     pedidos.push(pedido);
     loadTabla();
