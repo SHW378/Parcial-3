@@ -47,7 +47,7 @@
                                 <strong>Gestión de Pedidos</strong>
                             </div>
                             <div class="card-body">
-                                <form id="clienteForm" onsubmit="addCliente(); return false;" onreset="limpiarFormulario();">
+                                <form id="pedidosForm" onsubmit="addPedido(); return false;" onreset="limpiarFormulario();">
                                     <div class="row">
                                         <div class="col-6">
                                             <input type="text" class="form-control form-control-lg mb-2" placeholder="Nombre" id="Nombre" required>
@@ -57,11 +57,9 @@
                                             <input type="number" class="form-control form-control-lg mb-2" placeholder="Cantidad" id="Cantidad" required>
                                                 <select class="form-control form-control-lg mb-2" placeholder="Estado" id="Estado" required>
                                                     <option value="">Selecciona Estado</option>
-                                                    <option value="En preparación">En preparación</option>
+                                                    <option value="En preparación">Pendiente</option>
                                                     <option value="Enviado">Enviado</option>
                                                     <option value="Entregado">Entregado</option>
-                                                    <option value="Devuelto">Devuelto</option>
-                                                    <option value="Cerrado">Cerrado</option>
                                                 </select>
                                         </div>
                                     </div>
@@ -75,11 +73,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Listado de productos -->
+                    <!-- Listado de pedidos -->
                     <div class="col-md-6">
                         <div class="card border-0">
                             <div class="card-header text-white text-center" style="background:#23254a;">
-                                <strong>Listado de Clientes</strong>
+                                <strong>Listado de Pedidos</strong>
                             </div>
                             <div class="card-body p-2">
                                 <div class="table-responsive">
@@ -87,15 +85,13 @@
                                         <thead class="table-dark">
                                             <tr>
                                                 <th>Nombre</th>
-                                                <th>Apellido</th>
-                                                <th>Telefono</th>
-                                                <th>Correo</th>
-                                                <th>Direccion</th>
-                                                <th>Historial</th>
+                                                <th>Cantidad</th>
+                                                <th>Fecha</th>
+                                                <th>Estado</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="tblProductos">
-                                            <!-- Aquí van los productos -->
+                                        <tbody id="tblPedidos">
+                                            <!-- Aquí van los pedidos -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -114,6 +110,6 @@
     </div>
 </footer>
 
-<script src="js/Clientes.js"></script>
+<script src="js/Pedidos.js"></script>
 
 </html>
