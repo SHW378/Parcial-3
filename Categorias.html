@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StyleUrban</title>
+    <title>Pedidos</title>
     <link rel="stylesheet" href="/style/bootstrap-5.3.6-dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/style/mystyle.css" />
 </head>
@@ -27,17 +27,16 @@
                         <a class="nav-link" href="Pedidos.html">Pedidos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Categorias.html">Categorias</a>
+                        <a class="nav-link active" aria-current="page" href="#">Categorias</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="Promociones.html">Promociones</a>
+                        <a class="nav-link" href="Promociones.html">Promociones</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
-
-       <div class="container-fluid py-4">
+    <div class="container-fluid py-4">
         <div class="row justify-content-center">
             <div class="col-12 main-content-max">
                 <div class="row g-2">
@@ -45,17 +44,22 @@
                     <div class="col-md-6">
                         <div class="card border-0">
                             <div class="card-header text-white text-center" style="background:#23254a;">
-                                <strong>Gestión de Clientes</strong>
+                                <strong>Gestión de Categorias</strong>
                             </div>
                             <div class="card-body">
-                                <form id="promocionForm" onsubmit="addPromocion(); return false;" onreset="limpiarFormulario();">
+                                <form id="categoriasForm" onsubmit="addCategoria(); return false;" onreset="limpiarFormulario();">
                                     <div class="row">
                                         <div class="col-6">
-                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Nombre" id="nombre" required>
-                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Fecha Activa" id="fechaActiva" required>
+                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Nombre de categoría" id="Nombre" required>
+                                            <input type="date" class="form-control form-control-lg mb-2" placeholder="Fecha de creación" id="Fecha" required>
                                         </div>
                                         <div class="col-6">
-                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Descuento" id="Descuento" required>
+                                            <input type="text" class="form-control form-control-lg mb-2" placeholder="Descripción" id="Descripcion" required>
+                                                <select class="form-control form-control-lg mb-2" placeholder="Estado" id="Estado" required>
+                                                    <option value="">Selecciona Estado</option>
+                                                    <option value="Activo">Activo</option>
+                                                    <option value="Inactivo">Inactivo</option>
+                                                </select>
                                         </div>
                                     </div>
                                     <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
@@ -68,11 +72,11 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Listado de Clientes -->
+                    <!-- Listado de categorias -->
                     <div class="col-md-6">
                         <div class="card border-0">
                             <div class="card-header text-white text-center" style="background:#23254a;">
-                                <strong>Listado de Clientes</strong>
+                                <strong>Listado de Categorías</strong>
                             </div>
                             <div class="card-body p-2">
                                 <div class="table-responsive">
@@ -80,12 +84,13 @@
                                         <thead class="table-dark">
                                             <tr>
                                                 <th>Nombre</th>
-                                                <th>Descuento</th>
-                                                <th>Fecha Activa</th>
+                                                <th>Fecha de creación</th>
+                                                <th>Descripción</th>
+                                                <th>Estado</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="tblPromociones">
-                                            <!-- Aquí van los clientes -->
+                                        <tbody id="tblCategorias">
+                                            <!-- Aquí van las categorias -->
                                         </tbody>
                                     </table>
                                 </div>
@@ -96,7 +101,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 <footer>
@@ -105,6 +109,6 @@
     </div>
 </footer>
 
-<script src="/js/promociones.js"></script>
+<script src="js/Categorias.js"></script>
 
 </html>
