@@ -1,0 +1,10 @@
+[
+    {
+        "nombre": "Producto 1",
+        "precio": 299,
+        "stock": 20,
+        "talla": "M",
+        "color": "Negro",
+        "categoria": "Ropa Hombre"
+    }
+]
