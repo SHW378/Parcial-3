@@ -1,8 +1,33 @@
 [
     {
-        "Nombre": "Urbano",
-        "Fecha": "2023-01-01",
-        "Descripcion": "Descripción de la categoría Urbano",
+        "Nombre": "Temporada",
+        "Fecha": "2024-11-31",
+        "Descripcion": "Ropa y accesorios diseñados especialmente para la temporada de invierno.",
+        "Estado": "Inactivo"
+    },
+    {
+        "Nombre": "Deportivo",
+        "Fecha": "2025-06-15",
+        "Descripcion": "Ropa y accesorios diseñados para actividades deportivas y al aire libre.",
+        "Estado": "Activo"
+    },
+    {
+        "Nombre": "Casual",
+        "Fecha": "2023-06-20",
+        "Descripcion": "Ropa y accesorios para un estilo de vida diario y relajado.",
+        "Estado": "Activo"
+    },
+    {
+        "Nombre": "Juvenil",
+        "Fecha": "2022-09-10",
+        "Descripcion": "Ropa y accesorios diseñados para un público joven y moderno.",
+        "Estado": "Inactivo"
+    },
+    {
+        "Nombre": "Vintage",
+        "Fecha": "2024-10-05",
+        "Descripcion": "Ropa y accesorios con un estilo retro y nostálgico.",
         "Estado": "Activo"
     }
+
 ]

@@ -17,7 +17,8 @@
             </a>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="Productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page"
+                            href="Productos.html">Productos</a></li>
                     <li class="nav-item"><a class="nav-link" href="Clientes.html">Clientes</a></li>
                     <li class="nav-item"><a class="nav-link" href="Pedidos.html">Pedidos</a></li>
                     <li class="nav-item"><a class="nav-link" href="Categorias.html">Categorias</a></li>
@@ -51,7 +52,7 @@
                                         </div>
                                         <div class="col-6">
                                             <select class="form-control form-control-lg mb-2" id="Talla" required>
-                                                <option value="" disabled selected>Selecciona una talla</option>
+                                                <option value="">Selecciona una talla</option>
                                                 <option value="S">S</option>
                                                 <option value="M">M</option>
                                                 <option value="L">L</option>
@@ -60,8 +61,13 @@
                                             </select>
                                             <input type="text" class="form-control form-control-lg mb-2" id="Color"
                                                 placeholder="Color" required />
-                                            <input type="text" class="form-control form-control-lg mb-2" id="Categoria"
-                                                placeholder="Categoría" required />
+                                            <select class="form-control form-control-lg mb-2" id="Categoria" required>
+                                                <option value="">Selecciona una categoría</option>
+                                                <option value="Casual">Casual</option>
+                                                <option value="Deportivo">Deportivo</option>
+                                                <option value="Vintage">Vintage</option>
+                                            </select>
+
                                         </div>
                                     </div>
                                     <div class="d-flex flex-wrap justify-content-center gap-2 mt-3">
